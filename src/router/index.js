@@ -1,22 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+// components
+const Home = () => import('@/components/Home.vue')
+const Login = () => import('@/components/Login.vue')
+const Page404 = () => import('@/components/Page404.vue')
+
 Vue.use(VueRouter); // 미들웨어 추가
 
-// 컴포넌트 가지고오기
-import Home from '../components/Home.vue'
-import Login from '../components/Login.vue'
-import Page404 from '../components/Page404.vue'
-
-
-const router = new VueRouter({
+export default new VueRouter({
     mode: 'history',
+    linkActiveClass: 'open active',
     routes: [
-      {path: '/', component: Home},
-      {path: '/login', component: Login},
-      {path: '*', component: Page404}
+      {
+        path: '/',
+        component: Home
+      },
+      {
+        path: '/login',
+        component: Login
+      },
+      {
+        path: '*',
+        component: Page404
+      }
     ]
   }
 )
-
-export default router
