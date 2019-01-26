@@ -55,3 +55,13 @@ npm install babel-plugin-syntax-dynamic-import --save-dev
     "babel-plugin-syntax-dynamic-import"
   ]
 ```
+webpack.config.js
+```
+resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': path.resolve(__dirname, 'src'),
+    },
+    extensions: ['*', '.js', '.vue', '.json']
+},
+```
