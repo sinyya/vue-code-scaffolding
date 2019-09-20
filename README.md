@@ -23,7 +23,7 @@ scaffolding : 개발을 쉽게 시작할 수 있도록 기본 구조를 미리 �
 |   |   |   +-- ...          
 |   |   +-- images          
 |   +-- components                              컴포넌트
-|   +-- routes                                  라우터
+|   +-- router                                  라우터
 |   +-- store                                   Vuex 상태 관리
 |   |   +-- store.js
 |   |   +-- mutations.js
@@ -92,7 +92,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     
 - feature-1  
     - [2019.09.20] [Coding Convention 추가](./docs/coding_conventions.md)   
-    - [2019.09.20] 폴더 구조 설계  
+    - [2019.09.20] 폴더 구조 설계
+        - 폴더 구조 생성  
         - config/env 추가
         - views에 페이지 구성
         - components에 샘플 컴포넌트 추가   
@@ -101,6 +102,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 <br>
 
+### Work Contents
 #### babel-plugin-syntax-dynamic-import
 Dynamic Import를 사용하기 위한 두가지 방법 중 require.ensure 방식이 아닌 import 방식을 사용할 경우 바벨 플러그인을 사용해야한다.   
 웹팩에서 지원하는 babel-plugin-syntax-dynamic-import를 설치한다.
