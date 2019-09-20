@@ -1,6 +1,11 @@
 # Vue code scaffolding
 scaffolding : 개발을 쉽게 시작할 수 있도록 기본 구조를 미리 짜놓는 것. 
 
+## branches
+- master 
+- develop 
+- feature-1 : 코딩 컨벤션 추가
+
 ## Project setup
 ```
 yarn install
@@ -32,6 +37,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 <br>
+
+## Coding convention
+[Coding convention : 자주 보고 자주 생각할 것!!](./docs/coding_conventions.md)
 
 ## Work contents
 - [Dynamic Import : Use babel-plugin-syntax-dynamic-import](#babel-plugin-syntax-dynamic-import)
