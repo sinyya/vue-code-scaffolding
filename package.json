@@ -6,9 +6,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "//SERVE//": " --- SERVE --- ",
+    "serve:dev": "vue-cli-service serve --mode dev",
+    "serve:prod": "vue-cli-service serve --mode prod",
+    "//BUILD//": " --- BUILD --- ",
+    "dev": "vue-cli-service build --mode dev",
+    "prod": "vue-cli-service build --mode prod",
+    "//LINT//": " --- LINT --- ",
+    "lint": "vue-cli-service lint --mode dev"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -21,9 +26,12 @@
     "@vue/cli-service": "^3.11.0",
     "babel-eslint": "^10.0.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "clean-webpack-plugin": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack-merge": "^4.2.2",
+    "zip-webpack-plugin": "^3.0.0"
   },
   "eslintConfig": {
     "root": true,
@@ -34,7 +42,9 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
