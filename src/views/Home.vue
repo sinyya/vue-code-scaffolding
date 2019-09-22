@@ -12,6 +12,9 @@
     name : 'Home',
     components : {
       Logo
+    },
+    mounted() {
+      console.log(this.$store.state.CONSTANTS)
     }
   }
 </script>

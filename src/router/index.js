@@ -8,7 +8,7 @@ const Page404 = () => import('@/views/Page404.vue');
 
 Vue.use(VueRouter); // 미들웨어 추가
 
-export default new VueRouter({
+export const router =  new VueRouter({
     mode: 'history',
     linkActiveClass: 'open active',
     routes: [

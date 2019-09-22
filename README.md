@@ -97,7 +97,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
         - config/env 추가
         - views에 페이지 구성
         - components에 샘플 컴포넌트 추가   
-    
+    - [2019.09.22] Vuex 추가
+        - [상수 변수 관리 로직 추가](#constants)
+        - store.js 추가
+        - store 샘플 로그 추가
 
 
 <br>
@@ -125,3 +128,24 @@ babel.config.js
   }
 ```
 
+<br>
+
+#### Constants
+config 상수 파일 설정
+1. 고유 key 값을 정한 후 /src/assets/data/constants/ 위치에 constants.[key].js 파일을 생성한다.  
+    -  [주의] /src/assets/data/constants/constants.*.js 파일에 정의된 모든 키값은 동일해야 한다.  
+    
+        constants.constant1.js
+         ```javascript
+        export default Object.freeze({
+            NAME: "constant1"
+        })
+         ```
+         constants.constant2.js
+          ```javascript
+         export default Object.freeze({
+             NAME: "constant2"
+         })
+          ```
+2. /src/assets/data/constants.js 에 해당 config를 추가한다.
+3. config 상수는 vuex store.state.CONSTANTS에 저장한다.
