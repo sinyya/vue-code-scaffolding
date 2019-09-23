@@ -101,6 +101,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
         - [상수 변수 관리 로직 추가](#constants)
         - store.js 추가
         - store 샘플 로그 추가
+    - [2019.09.23] [Vuex 주석 추가](#vuex)
+        - store.js 주석 추가
+        - mutations.js 주석 추가
+        - action.js 주석 추가
 
 
 <br>
@@ -149,3 +153,18 @@ config 상수 파일 설정
           ```
 2. /src/assets/data/constants.js 에 해당 config를 추가한다.
 3. config 상수는 vuex store.state.CONSTANTS에 저장한다.
+
+<br>
+
+#### Vuex
+Vue.js의 상태관리를 위한 패턴이자 라이브러리.  
+컴포넌트 간의 통신이나 데이터 전달을 좀 더 유기적으로 관리할 필요성이 생긴다.      
+모든 데이터 통신 (state)을 한 곳에서 중앙 집중식으로 관리한다.
+
+![vuex-diagram](./docs/image/vuex-diagram.png)
+
+- store : 컴포넌트 간 공유될 data
+- matations : Vuex의 데이터(state) 값을 변경하는 로직
+- actions: 비 순차적 또는 비동기 처리 로직들을 선언
+
+참고 : https://joshua1988.github.io/web-development/vuejs/vuex-start/
