@@ -20,11 +20,14 @@ var variableLikeThis = '',
 - 소문자로 시작하며 새로운 단어의 첫 번째 문자는 대문자로 사용한다.
 - 함수의 첫 단어는 반드시 동사로 사용한다.  
 
-```javascript
-function getName() {
-    
-};
-```
+    ```javascript
+    function getName() {
+        
+    }
+    ```
+
+### 함수 작성 규칙
+- 같은 기능이 중복 되는 경우 함수로 작성한다.
 
 <br>
 

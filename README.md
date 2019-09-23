@@ -103,6 +103,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
         - store.js 주석 추가
         - mutations.js 주석 추가
         - action.js 주석 추가
+        
+- feature-2
+    - [2019.09.24] npm script 수정
+    - [2019.09.24] coding convention 함수 작성 규칙 추가
 
 
 <br>
