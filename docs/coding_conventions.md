@@ -67,19 +67,22 @@ var name = '홍길동',
 
 ```javascript
 /**
- * @function Takes 2 numbers and returns their sum.
- * @description Write your description here.
+ * Takes 2 numbers and returns their sum.
+ *
  * @version 1.0
- * @since 2019.08.06
+ * @since 2019.09.27
  * @author hyeshin2530
- * @link SampleView.vue
  * 
- * @param   {number} a the first number
- * @param   {number} b the second number
+ * @param   {Number} a      the first number
+ * @param   {Number} b      the second number
+ * @param   {Object} log      the log object
+ * <br>         - {Object} info  - the info object
+ * <br>             -- {String} msg  - the log message 
  *
  * @returns {number} the sum of a and b
  */
-function addNumbers(a, b) {
+function addNumbers(a, b, log) {
+  console.log(log.info.msg);
   return a + b;
 }
 ```
