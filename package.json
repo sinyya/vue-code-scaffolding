@@ -10,8 +10,8 @@
     "serve:dev": "vue-cli-service serve --mode dev",
     "serve:prod": "vue-cli-service serve --mode prod",
     "//BUILD//": " --- BUILD --- ",
-    "dev": "vue-cli-service build --mode dev",
-    "prod": "vue-cli-service build --mode prod",
+    "build:dev": "vue-cli-service build --mode dev",
+    "build:prod": "vue-cli-service build --mode prod",
     "//LINT//": " --- LINT --- ",
     "lint": "vue-cli-service lint --mode dev"
   },

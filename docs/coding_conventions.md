@@ -20,11 +20,14 @@ var variableLikeThis = '',
 - 소문자로 시작하며 새로운 단어의 첫 번째 문자는 대문자로 사용한다.
 - 함수의 첫 단어는 반드시 동사로 사용한다.  
 
-```javascript
-function getName() {
-    
-};
-```
+    ```javascript
+    function getName() {
+        
+    }
+    ```
+
+### 함수 작성 규칙
+- 같은 기능이 중복 되는 경우 함수로 작성한다.
 
 <br>
 
@@ -67,19 +70,22 @@ var name = '홍길동',
 
 ```javascript
 /**
- * @function Takes 2 numbers and returns their sum.
- * @description Write your description here.
+ * Takes 2 numbers and returns their sum.
+ *
  * @version 1.0
- * @since 2019.08.06
+ * @since 2019.09.27
  * @author hyeshin2530
- * @link SampleView.vue
  * 
- * @param   {number} a the first number
- * @param   {number} b the second number
+ * @param   {Number} a      the first number
+ * @param   {Number} b      the second number
+ * @param   {Object} log      the log object
+ * <br>         - {Object} info  - the info object
+ * <br>             -- {String} msg  - the log message 
  *
  * @returns {number} the sum of a and b
  */
-function addNumbers(a, b) {
+function addNumbers(a, b, log) {
+  console.log(log.info.msg);
   return a + b;
 }
 ```
