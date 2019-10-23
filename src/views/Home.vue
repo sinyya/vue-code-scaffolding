@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Logo/>
+    <logo/>
     <h1>Home</h1>
     <div>
       value : {{ getValue }}
