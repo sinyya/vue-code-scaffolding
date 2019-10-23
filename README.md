@@ -108,6 +108,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - [2019.09.24] npm script 수정
     - [2019.09.24] coding convention 함수 작성 규칙 추가
     - [2019.09.27] coding convention 주석 규칙 및 예제 수정
+    - [2019.10.23] coding convention 주석 예제 수정
 
 
 <br>

@@ -73,19 +73,23 @@ var name = '홍길동',
  * Takes 2 numbers and returns their sum.
  *
  * @version 1.0
- * @since 2019.09.27
+ * @since 2019.10.23
  * @author hyeshin2530
  * 
- * @param   {Number} a      the first number
- * @param   {Number} b      the second number
- * @param   {Object} log      the log object
- * <br>         - {Object} info  - the info object
- * <br>             -- {String} msg  - the log message 
+ * @param {Object} data  the data Object
+ * <br> - {Number}      a                   - the first number
+ * <br> - {Number}      b                   - the second number
+ * <br> - {Boolean}     [isReturn=true]     - Return or not 
+ * <br> - {Object}      [log]               - the optional log object (condition)
+ * <br>   -- {String}   code                - the log code (code A | code B | code C) 
+ * <br>   -- {String}   msg                 - the log message 
  *
  * @returns {number} the sum of a and b
  */
-function addNumbers(a, b, log) {
-  console.log(log.info.msg);
-  return a + b;
+function addNumbers(data) {
+    var isReturn = true && data.isReturn;
+    if(isReturn){
+        return data.a + data.b;
+    }
 }
 ```
