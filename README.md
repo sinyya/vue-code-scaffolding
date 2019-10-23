@@ -108,31 +108,75 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - [2019.09.24] npm script 수정
     - [2019.09.24] coding convention 함수 작성 규칙 추가
     - [2019.09.27] coding convention 주석 규칙 및 예제 수정
+    - [2019.10.23] coding convention 주석 예제 수정
+
+- feature-3
+    - [2019.10.23] [Webpack resolve.alias](#webpack-resolvealias) 내용 추가 
+    - [2019.10.23] [Dynamic import](#dynamic-import) 예제 추가 
 
 
 <br>
 
 ### Work Contents
-#### babel-plugin-syntax-dynamic-import
-Dynamic Import를 사용하기 위한 두가지 방법 중 require.ensure 방식이 아닌 import 방식을 사용할 경우 바벨 플러그인을 사용해야한다.   
-웹팩에서 지원하는 babel-plugin-syntax-dynamic-import를 설치한다.
+
+#### Webpack resolve.alias
+webpack ```resolve.alias```에는 기본적으로 '@'에 대해 src폴더를 바라보도록 설정 되어 있다.
+이것을 이용해 다른 모듈을 불러올 때 상대경로가 아닌 절대경로로 불러올 수 있다.
+
+src/router/index.js
+```
+// components
+const Home = () => import('@/views/Home.vue');
+const Login = () => import('@/views/Login.vue');
+const Page404 = () => import('@/views/Page404.vue');
+```
+
+<br>
+
+#### Dynamic import
+요소를 동적으로 로딩하기 위해서 Dynamic import 모듈을 추가한다.  
+아래 예제에서 logoFileName 데이터 값이 바뀌면 동적으로 이미지를 로딩한다.  
 [babel-plugin-syntax-dynamic-import](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import/#installation)   
 
-Install dependencies
+
+##### Installation
 ```
-npm install babel-plugin-syntax-dynamic-import --save-dev
+npm install --save-dev @babel/plugin-syntax-dynamic-import
 ```
 
-babel.config.js       
+##### Usage  
+babel.config.js
 ```
-  module.exports = {
-    presets: [
-      '@vue/app'
-    ],
-    plugins: [
-      "babel-plugin-syntax-dynamic-import"
-    ]
+module.exports = {
+  presets: [
+    '@vue/app'
+  ],
+  plugins: [
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+};
+```
+
+src/components/EtcSample.vue
+```
+<template>
+  <div>
+    <img :src="logoUrl" alt="Logo">
+    <img :src="require(`@/assets/images/${logoFileName}`)" alt="Logo">
+  </div>
+</template>
+
+<script>
+  export default {
+    name : 'Logo',
+    data() {
+      return {
+        logoUrl : require('@/assets/images/logo.png'),
+        logoFileName : 'logo.png'
+      }
+    }
   }
+</script>
 ```
 
 <br>
