@@ -31,9 +31,6 @@ export const store = new Vuex.Store({
         CONSTANTS: state => {
             return state.CONSTANTS;
         },
-        getConstantDefault: state => {
-            return state.CONSTANTS.CONSTANT_DEFAULT;
-        },
         getValue: state => {
             return state.value;
         },
