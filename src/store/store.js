@@ -20,7 +20,8 @@ export const store = new Vuex.Store({
     state: {
         CONSTANTS: constants.CONSTANT_FIRST,
         value: 0,
-        employeeList:[]
+        employeeList:[],
+        employeeInfo:{}
     },
     /**
      * 변경된 state 값을 받아오기 위한 Getters
@@ -37,6 +38,9 @@ export const store = new Vuex.Store({
         },
         getEmployeeList: state => {
             return state.employeeList;
+        },
+        getEmployeeInfo: state => {
+            return state.employeeInfo;
         },
     },
     /**

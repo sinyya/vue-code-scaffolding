@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import axios from 'axios';
 import {store} from '../store/store';
 
@@ -18,12 +17,14 @@ export default class ClientAPI {
         }).then(result => result.data)
             .catch(result => {
                 console.log(result.response);
-                throw new Error(`ClientAPI ${url} Error!!`);
+                new Error(`ClientAPI ${url} Error!!`);
+                throw result.response;
             })
     }
 
     /**
      * API-ID-1 직원 리스트 조회
+     * 직원 리스트 정보를 요청한다.
      *
      * @returns {Promise<unknown>}
      */
@@ -36,6 +37,7 @@ export default class ClientAPI {
 
     /**
      * API-ID-2 직원 정보 조회
+     * 특정 직원의 정보를 요청한다.
      *
      * @returns {Promise<unknown>}
      */
