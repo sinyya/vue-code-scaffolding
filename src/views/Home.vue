@@ -7,10 +7,12 @@
       <button @click="addValue">+</button> <button @click="addValueDelay">1초 뒤 +</button>
     </div>
     <div v-if="isLoading" class="list">
-      <li v-for="(item, i) in employeeList" v-bind:key="item.id">
-        <div>Name : {{item.employee_name}}</div>
-        <div>Salary : {{item.employee_salary}}</div>
-        <div>Age : {{item.employee_age}}</div>
+      <li v-for="item in employeeList" v-bind:key="item.id">
+          {{item.employee_name}} <button class="btn" @click="setInfo($event, item.id)">Show Details</button>
+          <div v-if="employeeInfo.id === item.id" class="detail">
+              <div>Salary : {{employeeInfo.employee_salary}}</div>
+              <div>Age : {{employeeInfo.employee_age}}</div>
+          </div>
       </li>
     </div>
   </div>
@@ -41,6 +43,7 @@
         CONSTANTS: 'CONSTANTS',
         getValue: 'getValue',
         employeeList: 'getEmployeeList',
+        employeeInfo: 'getEmployeeInfo',
       })
     },
     methods: {
@@ -60,12 +63,19 @@
       //
       ...mapActions({
         addValueDelay: 'addValue',
-        getEmployeeList: 'getEmployeeList'
+        getEmployeeList: 'getEmployeeList',
+        getEmployeeInfo: 'getEmployeeInfo'
       }),
       // Actions 를 이용할 때
       // addValueDelay() {
       //   this.$store.dispatch('addValue');
       // }
+        setInfo($event, id) {
+            this.getEmployeeInfo({id})
+                .finally(() => {
+                    console.log(`setInfo complete!! id : ${id}`);
+                })
+        }
     }
   }
 </script>
@@ -78,7 +88,13 @@
   .list {
     margin-top: 50px;
   }
-  .list li > div {
+  .list li{
+      margin-bottom: 20px;
+  }
+  .list li .btn{
+      margin-left: 150px;
+  }
+  .list li .common > div {
     display: inline-block;
     margin-right: 10px;
   }

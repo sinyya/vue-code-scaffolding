@@ -24,5 +24,9 @@ export const mutations = {
 
     setEmployeeList: function (state, employeeList) {
         return state.employeeList = employeeList;
+    },
+
+    setEmployeeInfo: function (state, employeeInfo) {
+        return state.employeeInfo = employeeInfo;
     }
 };

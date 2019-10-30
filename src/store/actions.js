@@ -1,5 +1,6 @@
 import ClientAPI from '../api/index';
 const clientAPI = new ClientAPI();
+import {store} from './store';
 
 /**
  * 비 순차적 또는 비동기 처리 로직들을 선언
@@ -28,7 +29,7 @@ export const actions = {
     },
 
     /**
-     * 메인화면의 초기화면 정보를 요청한다.
+     * 직원 리스트 정보를 요청한다.
      *
      * @param commit
      *
@@ -37,6 +38,24 @@ export const actions = {
     getEmployeeList({commit}) {
         return clientAPI.getEmployeeList().then(data => {
             commit('setEmployeeList', data)
+        })
+    },
+
+    /**
+     * 특정 직원의 정보를 요청한다.
+     *
+     * @param commit
+     * @param options
+     *
+     * @returns {Promise<unknown | never>}
+     */
+    getEmployeeInfo({commit}, options) {
+        return clientAPI.getEmployeeInfo(options).then(data => {
+            commit('setEmployeeInfo', data)
+        }).catch(() => {
+            commit('setEmployeeInfo', store.state.employeeList.find(item => {
+                return item.id === options.id
+            }))
         })
     },
 };
