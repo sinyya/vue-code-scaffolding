@@ -1,3 +1,4 @@
-export default Object.freeze({
-    NAME: "DEFAULT"
-})
+export default {
+    NAME: 'DEFAULT',
+    DOMAIN: 'http://dummy.restapiexample.com/'
+}

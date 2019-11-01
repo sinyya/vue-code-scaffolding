@@ -20,5 +20,13 @@ export const mutations = {
      */
     addValue: function (state) {
         return state.value++;
+    },
+
+    setEmployeeList: function (state, employeeList) {
+        return state.employeeList = employeeList;
+    },
+
+    setEmployeeInfo: function (state, employeeInfo) {
+        return state.employeeInfo = employeeInfo;
     }
 };

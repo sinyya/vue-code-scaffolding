@@ -18,8 +18,10 @@ export const store = new Vuex.Store({
      * 컴포넌트 간 공유될 data
      */
     state: {
-        CONSTANTS: constants,
-        value: 0
+        CONSTANTS: constants.CONSTANT_FIRST,
+        value: 0,
+        employeeList:[],
+        employeeInfo:{}
     },
     /**
      * 변경된 state 값을 받아오기 위한 Getters
@@ -31,11 +33,14 @@ export const store = new Vuex.Store({
         CONSTANTS: state => {
             return state.CONSTANTS;
         },
-        getConstantDefault: state => {
-            return state.CONSTANTS.CONSTANT_DEFAULT;
-        },
         getValue: state => {
             return state.value;
+        },
+        getEmployeeList: state => {
+            return state.employeeList;
+        },
+        getEmployeeInfo: state => {
+            return state.employeeInfo;
         },
     },
     /**

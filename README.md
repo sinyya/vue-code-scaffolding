@@ -114,6 +114,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - [2019.10.23] [Webpack resolve.alias](#webpack-resolvealias) 내용 추가 
     - [2019.10.23] [Dynamic import](#dynamic-import) 예제 추가 
 
+- feature-4
+    - [2019.10.30] Axios 모듈 추가 
+    - [2019.10.30] constants 개선 
+    - [2019.10.30] API 스캐폴딩
 
 <br>
 

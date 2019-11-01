@@ -1,3 +1,3 @@
-export default Object.freeze({
-    NAME: "constant2"
-})
+export default {
+    NAME: 'constant2'
+}
