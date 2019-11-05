@@ -2,6 +2,7 @@
   <div>
     <img :src="logoUrl" alt="Logo">
     <img :src="require(`@/assets/images/${logoFileName}`)" alt="Logo">
+    <div class="logo"></div>
   </div>
 </template>
 
@@ -18,5 +19,9 @@
 </script>
 
 <style>
-
+.logo {
+  width: 200px;
+  height: 200px;
+  background: url('~@/assets/images/logo.png');
+}
 </style>
