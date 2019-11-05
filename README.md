@@ -118,6 +118,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - [2019.10.30] Axios 모듈 추가 
     - [2019.10.30] constants 개선 
     - [2019.10.30] API 스캐폴딩
+    
+- feature-5
+    - [2019.11.05] css background static url 처리 샘플 추가 
 
 <br>
 
