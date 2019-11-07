@@ -17,7 +17,13 @@ export const router = new VueRouter({
         routes: [
             {
                 path: '/',
-                component: Home
+                component: Home,
+                children: [
+                    {
+                        path: 'foo',
+                        component: Foo
+                    }
+                ]
             },
             {
                 path: '/main',
