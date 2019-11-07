@@ -128,7 +128,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 #### Webpack resolve.alias
 webpack ```resolve.alias```에는 기본적으로 '@'에 대해 src폴더를 바라보도록 설정 되어 있다.
-이것을 이용해 다른 모듈을 불러올 때 상대경로가 아닌 절대경로로 불러올 수 있다.
 
 src/router/index.js
 ```
