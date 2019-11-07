@@ -1,20 +1,22 @@
 <template>
   <div>
-    <logo/>
+<!--    <logo/>-->
     <h1>Home</h1>
-    <div>
-      value : {{ getValue }}
-      <button @click="addValue">+</button> <button @click="addValueDelay">1초 뒤 +</button>
-    </div>
-    <div v-if="isLoading" class="list">
-      <li v-for="item in employeeList" v-bind:key="item.id">
-          {{item.employee_name}} <button class="btn" @click="setInfo($event, item.id)">Show Details</button>
-          <div v-if="employeeInfo.id === item.id" class="detail">
-              <div>Salary : {{employeeInfo.employee_salary}}</div>
-              <div>Age : {{employeeInfo.employee_age}}</div>
-          </div>
-      </li>
-    </div>
+      <router-link :to="{path:'/main/foo'}" relace>/main/foo</router-link>
+      <router-view></router-view>
+<!--    <div>-->
+<!--      value : {{ getValue }}-->
+<!--      <button @click="addValue">+</button> <button @click="addValueDelay">1초 뒤 +</button>-->
+<!--    </div>-->
+<!--    <div v-if="isLoading" class="list">-->
+<!--      <li v-for="item in employeeList" v-bind:key="item.id">-->
+<!--          {{item.employee_name}} <button class="btn" @click="setInfo($event, item.id)">Show Details</button>-->
+<!--          <div v-if="employeeInfo.id === item.id" class="detail">-->
+<!--              <div>Salary : {{employeeInfo.employee_salary}}</div>-->
+<!--              <div>Age : {{employeeInfo.employee_age}}</div>-->
+<!--          </div>-->
+<!--      </li>-->
+<!--    </div>-->
   </div>
 </template>
 
