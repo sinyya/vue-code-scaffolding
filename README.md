@@ -122,6 +122,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - feature-5
     - [2019.11.05] css background static url 처리 샘플 추가 
 
+- feature-6
+    - [2019.11.07] vue.config.js publicPath 이슈 
+        - ```./```에서 ```/```로 수정
+
 <br>
 
 ### Work Contents
