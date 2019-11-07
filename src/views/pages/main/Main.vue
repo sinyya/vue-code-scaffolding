@@ -1,9 +1,8 @@
 <template>
   <div>
 <!--    <logo/>-->
-    <h1>Home</h1>
-      <div><router-link :to="{path:'/main/foo'}">/main/foo</router-link></div>
-      <div><router-link :to="{path:'/main/foo2'}">/main/foo2</router-link></div>
+    <h2>Main</h2>
+      <router-view></router-view>
 <!--    <div>-->
 <!--      value : {{ getValue }}-->
 <!--      <button @click="addValue">+</button> <button @click="addValueDelay">1초 뒤 +</button>-->
@@ -25,7 +24,7 @@
   const Logo = () => import('@/components/Logo.vue');
 
   export default {
-    name : 'Home',
+    name : 'Main',
     components : {
       Logo
     },
